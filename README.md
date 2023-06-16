@@ -61,10 +61,10 @@ https://goblog.not4saken.com/
 
 ## Clean Code
 SonarQube Blog: ristek.link/c6-go-blog-sonarqube-blog
-<img width="400" height="256" src="https://user-images.githubusercontent.com/88226713/210935787-b3da5815-5f10-4776-b988-64ebfce8a4c6.jpg">
+<img width="800" height="512" src="https://github.com/bryan273/Go-Blog/assets/88226713/6a52c223-41b9-4ed8-9d85-360ba99ec44d">
 
 SonarQube Auth: ristek.link/c6-go-blog-sonarqube-auth
-<img width="400" height="256" src="https://user-images.githubusercontent.com/88226713/210935787-b3da5815-5f10-4776-b988-64ebfce8a4c6.jpg">
+<img width="800" height="512" src="https://github.com/bryan273/Go-Blog/assets/88226713/6d98280d-947d-42e6-a75f-0639ad8b5894">
 
 ## Design Pattern
 * Proxy Pattern
@@ -78,11 +78,11 @@ SonarQube Auth: ristek.link/c6-go-blog-sonarqube-auth
 ## Profiling
 Prometheus & Grafana
 
-<img width="400" height="181" src="https://user-images.githubusercontent.com/88226713/210935787-b3da5815-5f10-4776-b988-64ebfce8a4c6.jpg">
+<img width="800" height="362" src="https://github.com/bryan273/Go-Blog/assets/88226713/1c8005ee-0ef5-400b-b321-cd6ce1acc56f">
 
-<img width="400" height="155" src="https://user-images.githubusercontent.com/88226713/210935787-b3da5815-5f10-4776-b988-64ebfce8a4c6.jpg">
+<img width="800" height="310" src="https://github.com/bryan273/Go-Blog/assets/88226713/7efef4f3-91d2-4181-83cf-ef604455d371">
 
-<img width="400" height="134" src="https://user-images.githubusercontent.com/88226713/210935787-b3da5815-5f10-4776-b988-64ebfce8a4c6.jpg">
+<img width="800" height="268" src="https://github.com/bryan273/Go-Blog/assets/88226713/a59a0dd2-2b33-42c1-ae3e-3b72bf8f73a5">
 
 ## Notes
 Repository ini memiliki 2 folder microservices untuk backend auth dan blog. Serta, 1 folder untuk frontend aplikasi
