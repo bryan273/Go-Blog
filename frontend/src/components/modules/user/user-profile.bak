@@ -1,0 +1,94 @@
+import Link from "next/link";
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from 'react-icons/fa';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
+const UserProfile = ({userData}) => {
+  const {username} = userData?.username || {};
+  const {fullname} = userData?.fullname || {};
+  const {email} = userData?.email || {};
+  const {description} = userData?.description || {};
+
+  const [boxClassName, setBoxClassName] = useState('md:responsive-box');
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newBoxClassName = window.innerWidth <= 768 ? 'responsive-box-small' : 'responsive-box';
+      setBoxClassName(newBoxClassName);
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize); 
+    };
+  }, []);
+
+  return (
+    <div className={boxClassName}>
+    <div className="pt-32" >
+    <div className="w-3/5 mx-auto p-8 border border-gray-300 rounded-lg bg-gray-100">
+      <h1 className="font-bold text-xl text-gray-500 mb-2">Your Profile</h1>
+      <div className="flex flex-col md:flex-row pt-2 pb-3">
+        <div className="flex flex-col pr-1">
+          <div className="bg-white-100 border-2 border-cyan-900 rounded-lg p-16" style={{ width: '100px', height: '100px' }}></div>
+          <div className="flex flex-row pt-3">
+            <div><FontAwesomeIcon icon={faUser} /></div>
+            <h1 className="pl-3 text-sm">X Followings</h1>
+          </div>
+          <div className="flex flex-row pt-1">
+            <div><FontAwesomeIcon icon={faUsers} /></div>
+            <h1 className="pl-3 text-sm">X Followers</h1>
+          </div>
+          <div className="flex flex-row pt-1">
+            <div><FontAwesomeIcon icon={faNewspaper} /></div>
+            <h1 className="pl-3 text-sm">X Posts</h1>
+          </div>
+        </div>
+        <div className="flex flex-col w-full">
+          <div className="font-bold text-gray-500 pl-5">Full Name</div>
+          <div className="flex pl-5">
+            <div className="shadow bg-cyan-50 appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <h1>{fullname}</h1>
+            </div>
+          </div>
+          <div className="font-bold text-gray-500 pl-5 pt-3">Username</div>
+          <div className="flex pl-5">
+            <div className="shadow bg-cyan-50 appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <h1>{username}</h1>
+            </div>
+          </div>
+          <div className="font-bold text-gray-500 pl-5 pt-3">Email</div>
+          <div className="flex pl-5">
+            <div className="shadow bg-cyan-50 appearance-none border rounded w-full h-10 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <h1>{email}</h1>
+            </div>
+          </div>
+          <div className="font-bold text-gray-500 pl-5 pt-3">About Me</div>
+          <div className="flex pl-5">
+            <div className="shadow bg-cyan-50 appearance-none border flex-grow rounded w-full h-20 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <h1>{description ?? ""}</h1>
+            </div>
+          </div>
+          <div className="flex pt-14">
+            <Link className="flex flex-row ml-auto" href={"/user/edit"}>
+              <button className="bg-cyan-500 p-2 text-white rounded-md hover:bg-cyan-600">Edit Profile</button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  );
+  
+}
+
+export default UserProfile;

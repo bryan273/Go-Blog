@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #f3f4f6;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-dark-blue {
+  background-color: hsl(218, 23%, 16%);
+}
+
+.bg-grayish-darkblue {
+  background-color: hsl(217, 19%, 24%);
+}
+
+.light-cyan {
+  color: hsl(193, 38%, 86%);
+}
+
+.min-h-72 {
+  min-height: 18rem;
+}
+
+.neon-green {
+  color: hsl(150, 100%, 66%);
+}
+.bg-neon-green {
+  background-color: hsl(150, 100%, 66%);
+}
+
+.wide-spacing {
+  letter-spacing: 0.3em;
+}
+
+.green-shadow:hover {
+  box-shadow: 0 0 10px hsl(150, 100%, 66%);
+}
+
+.loader-circle-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid transparent;
+  border-top: 5px solid #bbb;
+  border-right: 5px solid #bbb;
+  border-radius: 100%;
+  border-width: 3px;
+}
+.spinner_top {
+  animation: spinnerOne 3s linear infinite;
+  height: 70px;
+  width: 70px;
+}
+.spinner_mid {
+  animation: spinnerOne 5s linear infinite;
+  height: 47px;
+  width: 47px;
+}
+.spinner_bot {
+  animation: spinnerOne 5s linear infinite;
+  height: 24px;
+  width: 24px;
+}
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.noSelect {
+  --user-select: none;
+}

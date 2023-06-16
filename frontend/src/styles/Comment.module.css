@@ -1,0 +1,41 @@
+.comment-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.comment-content {
+  margin-right: 10%;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+
+.comment-time {
+  opacity: 50%;
+  margin-left: 2%;
+}
+
+.comment-form {
+  border: 2px solid cyan;
+  border-radius: 0.5rem;
+  height: 35px;
+  margin-top: 4%;
+  margin-right: 4%;
+  padding: 10px;
+  width: 300px;
+  background: #eee;
+}
+
+.comment-form:focus {
+  border-color: orangered;
+}
+
+.comment-form:hover {
+  border-color: blue;
+}

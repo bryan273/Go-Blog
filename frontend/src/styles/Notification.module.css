@@ -1,0 +1,45 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f1f1f1;
+}
+
+.notifications {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid #eee;
+}
+
+.card:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.info {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.info p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: #999;
+}
